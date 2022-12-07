@@ -1,0 +1,15 @@
+.footer-container {
+  height: 61px;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(2px);
+  .footer-text-container {
+    display: flex;
+    margin-right: 32px;
+  }
+}

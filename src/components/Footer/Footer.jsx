@@ -1,13 +1,12 @@
 import React from "react";
+import FooterText from "../FooterText/FooterText";
 
-const Footer = ()=>{
+const Footer = () => {
+  return (
+    <div className="footer-container d-flex-row font-family-marvel-inter">
+      <FooterText text={"Know about the page's creators"}>hola</FooterText>
+    </div>
+  );
+};
 
-
-    return(
-        <div>
-            
-        </div>
-    )
-}
-
-export default Footer
+export default Footer;
