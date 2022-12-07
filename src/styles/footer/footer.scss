@@ -17,11 +17,15 @@
   .footer-socials{
     padding: 5px 10px;
     border-radius: 50px;
-    background-color: red;
+    background-color: #D9D9D94D;
   }
   .footer-socials-logos{
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 5px;
+    padding: 3px 5px;
+  }
+  #socials-divider{
+    transform: rotate(90deg);
   }
 }

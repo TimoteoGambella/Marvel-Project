@@ -1,12 +1,12 @@
 import React from 'react'
-import OptionCard from '../OptionCard/OptionCard'
+import HeroOptionCard from '../HeroOptionCard/HeroOptionCard'
 
 const HeroOptions = () => {
   return (
     <div className='option-containers d-flex-row'>
-      <OptionCard title={"CHARACTERS"} />
-      <OptionCard title={"COMICS"} />
-      <OptionCard title={"SERIES"} />
+      <HeroOptionCard title={"CHARACTERS"} />
+      <HeroOptionCard title={"COMICS"} />
+      <HeroOptionCard title={"SERIES"} />
     </div>
   )
 }
