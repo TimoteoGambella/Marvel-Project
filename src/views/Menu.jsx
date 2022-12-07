@@ -1,8 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
-import wallpaperCharacters from "../assets/fondo1.png";
-import wallpaperSeries from "../assets/fondo2.png";
-import wallpaperComics from "../assets/fondo4.png";
 // import { UseApiContext } from "../context/ApiContext";
 
 const Menu = () => {
@@ -14,8 +11,6 @@ const Menu = () => {
   //     })
   // }, []);
 
-  const [wallpaper, setWallpaper] = useState("");
-
   const { categoryID } = useParams();
   //console.log(categoryID);
   if (categoryID) {
@@ -26,30 +21,15 @@ const Menu = () => {
     }
   }
 
-  useEffect(() => {
-    switch (categoryID) {
-      case "characters":
-        setWallpaper(wallpaperCharacters);
-        //console.log(`The selected category is: ${categoryID}`);
-        break;
-      case "comics":
-        setWallpaper(wallpaperComics);
-        //console.log(`The selected category is: ${categoryID}`);
-        break;
-      case "series":
-        setWallpaper(wallpaperSeries);
-        //console.log(`The selected category is: ${categoryID}`);
-        break;
-      default:
-        setWallpaper(wallpaperCharacters);
-        break;
-    }
-  }, [categoryID]);
-
   return (
     <div className="menu-container">
-      <img className="menu-container-wallpaper" src={wallpaper} alt="" />
-      <h1>{categoryID}</h1>
+      <div className="menu-container-hero">
+        <div className="menu-container-hero-text">
+          <h1 className="font-family-marvel-principal">marvel {categoryID}</h1>
+          <h2 className="font-family-marvel-roboto">Lorem ipsum dolor sit amet.</h2>
+        </div>
+        
+      </div>
     </div>
   );
 };

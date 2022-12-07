@@ -1,15 +1,24 @@
-.menu-container{
+.menu-container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 540px;
   background-color: #000000;
-  
-  .menu-container-wallpaper {
-    height: 100%;
-    width: 100%;
-    opacity: .3;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url('../../assets/fondo4.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .menu-container-hero {
+    height: 540px;
+
+    .menu-container-hero-text{
+      font-size: 24px;
+      position: absolute;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      top: 220px;
+      text-align: center;
+      text-transform: uppercase;
+    }
   }
 }
