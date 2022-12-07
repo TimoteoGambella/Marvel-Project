@@ -8,8 +8,12 @@ const HeroOptions = () => {
       <Link to={"/category/characters"}>
         <HeroOptionCard title={"CHARACTERS"} />
       </Link>
-      <HeroOptionCard title={"COMICS"} />
-      <HeroOptionCard title={"SERIES"} />
+      <Link to={"/category/comics"}>
+        <HeroOptionCard title={"COMICS"} />
+      </Link>
+      <Link to={"/category/series"}>
+        <HeroOptionCard title={"SERIES"} />
+      </Link>
     </div>
   );
 };

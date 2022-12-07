@@ -13,6 +13,27 @@
         height: 42px;
         margin-left: 32px;
     }
+    .navbar-menu-links{
+        font-family: 'Roboto';
+        font-style: normal;
+        color: white;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: white;
+        
+        :hover{
+            color:red;
+        }
+        :link{
+            color: white;
+        }
+        :active{
+            color: white;
+        }
+        transition: all 2s;
+        text-decoration: none;
+    }
     .searchbar{
         width: 210px;
         height: 34px;
