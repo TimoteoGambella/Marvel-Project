@@ -2,9 +2,9 @@ import React from "react";
 
 const HeroText = () => {
   return (
-    <div className="font-family-marvel-principal">
-      <h1 className="hero-text-main">ARE YOU A MARVEL FAN?</h1>
-      <h3 className="hero-text-mainsub">
+    <div>
+      <h1 className="hero-text-main font-family-marvel-principal">ARE YOU A MARVEL FAN?</h1>
+      <h3 className="hero-text-mainsub font-family-marvel-roboto">
         Get into the section that you are most interested, and enjoy the Marvel
         world
       </h3>
