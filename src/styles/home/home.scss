@@ -36,6 +36,13 @@
     left: 99px;
     top: 315px;
     justify-content: space-between;
+    text-decoration: none;
+    :link{
+      color: white;
+    }
+    :visited{
+      color: white;
+    }
   }
   .option-card{
     width: 320px;
