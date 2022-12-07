@@ -4,6 +4,8 @@ export const UseApiContext = createContext();
 
 export const ApiContext = ({children}) => {
 
+    const keyApiMarvel = "ae8aa38451b4cc9abc698da16728d4fe"
+
     // LLAMADO A MARVEL API
     const apiFetch1=async(url)=>{
       await fetch(
@@ -22,9 +24,9 @@ export const ApiContext = ({children}) => {
     }
 
     // LLAMADO A SUPERHERO API
-    const apiFetch2=async(id)=>{
+    const apiFetch2=async(name)=>{
       await fetch(
-          `https://superheroapi.com/api/5651474918252451/${id}`
+          `https://superheroapi.com/api/5651474918252451/${name}`
         )
           .then((response) => response.json())
           .then((data) => {
@@ -39,7 +41,7 @@ export const ApiContext = ({children}) => {
     }
 
     return(
-        <UseApiContext.Provider value={{apiFetch1,apiFetch2}}>
+        <UseApiContext.Provider value={{apiFetch1,apiFetch2,keyApiMarvel}}>
             {children}
         </UseApiContext.Provider>
     )
