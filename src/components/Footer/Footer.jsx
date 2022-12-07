@@ -4,7 +4,7 @@ import FooterText from "../FooterText/FooterText";
 const Footer = () => {
   return (
     <div className="footer-container d-flex-row font-family-marvel-inter">
-      <FooterText text={"Know about the page's creators"}>hola</FooterText>
+      <FooterText text={"Know about the page's creators"}></FooterText>
     </div>
   );
 };

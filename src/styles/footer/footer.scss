@@ -11,5 +11,17 @@
   .footer-text-container {
     display: flex;
     margin-right: 32px;
+    align-items: center;
+    gap: 10px;
+  }
+  .footer-socials{
+    padding: 5px 10px;
+    border-radius: 50px;
+    background-color: red;
+  }
+  .footer-socials-logos{
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
 }
