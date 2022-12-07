@@ -4,9 +4,9 @@ const FooterSocials = () => {
   return (
     <div className='footer-socials'>
       <div className='footer-socials-logos'>
-        <i class="fa-brands fa-linkedin-in"></i>
+        <a target={"_blank"} href="https://www.linkedin.com/" rel='noopener noreferrer' ><i class="fa-brands fa-linkedin-in"></i></a>
         <i id='socials-divider' class="fa-solid fa-minus"></i>
-        <i class="fa-brands fa-behance"></i>
+        <a target={"_blank"} href="https://www.behance.net/" rel='noopener noreferrer' ><i class="fa-brands fa-behance"></i></a>
       </div>
     </div>
   )
