@@ -1,0 +1,15 @@
+.menu-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 540px;
+  background-color: #000000;
+  
+  .menu-container-wallpaper {
+    height: 100%;
+    width: 100%;
+    opacity: .3;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
