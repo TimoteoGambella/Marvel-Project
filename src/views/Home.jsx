@@ -14,8 +14,10 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <HeroText />
-      <HeroOptions />
+      <div className="hero-container">
+        <HeroText />
+        <HeroOptions />
+      </div>
     </div>
   );
 };
