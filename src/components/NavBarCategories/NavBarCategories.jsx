@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom'
 const NavBarCategories = () => {
   return (
     <div className="d-flex-row navbar-menu">
-        <Link className="hidden navbar-menu-links" to={"/category/characters"}>
+        <Link className="navbar-menu-links" to={"/category/characters"}>
           <p>Characters</p> 
         </Link>      
-        <Link className="hidden navbar-menu-links" to={"/category/comics"}>
+        <Link className="navbar-menu-links" to={"/category/comics"}>
           <p>Comics</p> 
         </Link>      
-        <Link className="hidden navbar-menu-links" to={"/category/series"}>
+        <Link className="navbar-menu-links" to={"/category/series"}>
           <p>Series</p> 
         </Link>      
     </div>

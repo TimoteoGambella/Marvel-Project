@@ -5,14 +5,7 @@ import MenuList from "../MenuList/MenuList";
 
 const MenuContainer = () => {
   const { categoryID } = useParams();
-  //console.log(categoryID);
-  if (categoryID) {
-    const links = document.getElementsByClassName("navbar-menu-links");
-    for (let index = 0; index < links.length; index++) {
-      const link = links[index];
-      link.classList.remove("hidden");
-    }
-  }
+  console.log(categoryID);
 
   return (
     <div className="menu-container">

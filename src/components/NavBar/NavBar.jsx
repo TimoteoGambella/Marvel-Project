@@ -1,28 +1,21 @@
 import { InputAdornment, TextField } from "@mui/material";
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import logo from "../../assets/marvel.png";
 import SearchIcon from "@mui/icons-material/Search";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import NavBarCategories from "../NavBarCategories/NavBarCategories";
-import { UseApiContext } from "../../context/ApiContext";
 
 const NavBar = () => {
-  const {showCategories, setShowCategories, category}=useContext(UseApiContext)
-  console.log(category);
-   
- useEffect(()=>{
-  if(category){
-    setShowCategories(true)
-  }
- },[])
- 
-  
+  //const { categoryID } = useContext(UseApiContext);
+  const { categoryID } = useParams();
+  console.log(categoryID);
+
   return (
     <div className="navbar-container d-flex-row">
       <Link to={"/"}>
-        <img src={logo} alt="LOGO" /> 
+        <img src={logo} alt="LOGO" />
       </Link>
-      {showCategories===true && <NavBarCategories/>}
+      {categoryID && <NavBarCategories />}
       <TextField
         placeholder="Search"
         className="searchbar font-family-marvel-roboto"

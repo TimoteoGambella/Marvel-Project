@@ -7,21 +7,21 @@ import Footer from "./components/Footer/Footer.jsx";
 import "./styles/styles.scss";
 import { ApiContext } from "./context/ApiContext.jsx";
 
-function App() {
+const App = () => {
   return (
     <>
       <ApiContext>
         <Router>
-        <NavBar />
+          <NavBar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/category/:categoryID" element={<Menu />} />
           </Routes>
-        <Footer />
+          <Footer />
         </Router>
       </ApiContext>
     </>
   );
-}
+};
 
 export default App;
