@@ -15,7 +15,7 @@ const MenuContainer = () => {
   return (
     <div className="menu-container">
       <MenuHero categoryID={categoryID} />
-      <MenuList />
+      <MenuList categoryID={categoryID}/>
     </div>
   );
 };
