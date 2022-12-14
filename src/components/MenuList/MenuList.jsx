@@ -4,8 +4,7 @@ import wallpaperCharactersList from "../../assets/fondoListCharacters.png";
 import wallpaperComicsList from "../../assets/fondoListComics.png";
 import wallpaperSeriesList from "../../assets/fondoListSeries.png";
 
-const MenuList = ({categoryID}) => {
-
+const MenuList = ({ categoryID }) => {
   const [menuListWallpaper, setMenuListWallpaper] = useState("");
 
   useEffect(() => {
@@ -21,7 +20,11 @@ const MenuList = ({categoryID}) => {
   return (
     <div className="menu-list-container">
       <div className="menu-container-list-wallpaper">
-        <img id="menu-list-wallpaper" src={menuListWallpaper} alt="listWallpaper" />
+        <img
+          id="menu-list-wallpaper"
+          src={menuListWallpaper}
+          alt="listWallpaper"
+        />
       </div>
       <div className="menu-container-list-cards">
         <MenuListCard

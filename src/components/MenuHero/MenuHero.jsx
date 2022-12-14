@@ -19,7 +19,11 @@ const MenuHero = ({ categoryID }) => {
   return (
     <div className="menu-container-hero">
       <div className="menu-container-hero-wallpaper">
-        <img id="menu-hero-wallpaper" src={menuHeroWallpaper} alt="categoryWallpaper" />
+        <img
+          id="menu-hero-wallpaper"
+          src={menuHeroWallpaper}
+          alt="categoryWallpaper"
+        />
       </div>
       <div className="menu-container-hero-text">
         <h1 className="font-family-marvel-principal" id="header">
