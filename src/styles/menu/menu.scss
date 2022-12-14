@@ -58,6 +58,12 @@
       justify-content: space-between;
       border-radius: 20px;
       box-shadow: 0px 0px 30px #ff4444;
+      transition: all 0.2s;
+
+      &:hover{
+        cursor: pointer;
+        transform: scale(1.02);
+      }
 
       .menu-list-card-body {
         display: flex;
