@@ -10,6 +10,8 @@ import Footer from "./components/Footer/Footer.jsx";
 
 import { ApiContext } from "./context/ApiContext.jsx";
 
+import "swiper/css";
+import "swiper/css/navigation";
 import "./styles/styles.scss";
 
 const App = () => {
