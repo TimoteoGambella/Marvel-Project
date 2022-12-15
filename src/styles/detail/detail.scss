@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 175vh;
+  height: 200vh;
   background: rgb(200, 0, 0);
   background: radial-gradient(circle, rgb(148, 0, 0) 0%, rgb(21, 0, 0) 100%);
   z-index: 10;
@@ -67,7 +67,6 @@
   }
 
   .detail-container-footer {
-
     .detail-container-body {
       margin: 0 auto;
       display: flex;
@@ -80,20 +79,84 @@
       border-top-right-radius: 0;
       padding: 40px;
 
-      .detail-container-body-text{
+      .detail-container-body-text {
         font-size: 20px;
         text-transform: uppercase;
       }
 
-      .detail-container-carrousel{
+      .detail-container-carrousel {
         margin-top: 40px;
-        .detail-container-carrousel-slide{
+        height: 300px;
+        display: flex;
+
+        .swiper {
+          .swiper-button-prev::after,
+          .swiper-button-next::after {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 0, 0, 0.835);
+            padding: 20px;
+            font-size: 22px;
+            height: 5px;
+            width: 5px;
+            color: #ffffff;
+            border-radius: 50%;
+          }
+        }
+
+        .detail-container-carrousel-slide {
           display: flex;
           justify-content: center;
+          align-items: center;
+          gap: 20px;
+        }
+
+        .detail-container-cards {
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: center;
+          gap: 10px;
+        }
+
+        .detail-card {
+          width: 250px;
+          height: fit-content;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          border-radius: 20px;
+          transition: all 0.2s;
+          z-index: 3;
+
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.01);
+          }
+
+          .detail-card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+
+          .detail-card-image {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            width: 100%;
+          }
+          .detail-card-footer {
+            position: relative;
+            padding: 10px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-color: rgba(80, 0, 0, 0.5);
+            text-align: center;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+          }
         }
       }
-
     }
   }
-
 }

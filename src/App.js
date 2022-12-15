@@ -19,7 +19,7 @@ const App = () => {
     <>
       <ApiContext>
         <Router>
-          <NavBar/>
+          <NavBar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/category/:categoryID" element={<Menu />} />
