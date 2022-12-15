@@ -1,0 +1,36 @@
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 175vh;
+  background: rgb(200, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgb(148, 0, 0) 0%,
+    rgb(21, 0, 0) 100%
+  );
+  z-index: 10;
+
+  .detail-container-hero {
+    background-color: #000000;
+
+    .detail-container-hero-wallpaper{
+      display: absolute;
+      width: 100%;
+    }
+
+    #detail-hero-wallpaper{
+      display: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.4;
+    }
+
+    .detail-container-hero-text {
+      width: 100%;
+      font-size: 24px;
+      justify-content: space-between;
+      padding: 20px;
+    }
+  }
+}

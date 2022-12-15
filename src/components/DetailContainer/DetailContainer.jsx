@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { UseApiContext } from "../../context/ApiContext";
+import DetailFooter from "../DetailFooter.jsx/DetailFooter";
 import DetailHero from "../DetailHero/DetailHero";
 
 const DetailContainer = () => {
@@ -15,7 +16,8 @@ const DetailContainer = () => {
 
   return (
     <div className="detail-container">
-      <DetailHero categoryID={categoryID} />
+      <DetailHero categoryID={categoryID} itemID={itemID} />
+      <DetailFooter categoryID={categoryID} itemID={itemID} />
     </div>
   );
 };
