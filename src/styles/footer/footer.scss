@@ -3,10 +3,10 @@
   width: 100%;
   align-items: center;
   justify-content: flex-end;
-  position: fixed;
+  position: relative;
   bottom: 0px;
 
-  background: rgba(0, 0, 0, 0.7);
+  background: rgb(0, 0, 0);
   backdrop-filter: blur(2px);
   z-index: 3;
   .footer-text-container {

@@ -4,13 +4,13 @@ import DetailCard from "../DetailCard/DetailCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 
-const DetailFooter = () => {
+const DetailFooter = ({ categoryID, itemID }) => {
   return (
     <div className="detail-container-footer">
       <div className="detail-container-body">
         <div className="detail-container-body-text">
           <h2 className="font-family-marvel-principal">
-            Know about other characters
+            Know about other {categoryID}
           </h2>
         </div>
         {/* carrousel */}
