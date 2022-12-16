@@ -25,7 +25,7 @@ export const ApiContext = ({ children }) => {
 
   // LLAMADO A SUPERHERO API
   const apiFetch2 = async (name) => {
-    await fetch(`https://superheroapi.com/api/5651474918252451/${name}`)
+    await fetch(`https://superheroapi.com/api/5651474918252451/search/${name}`)
       .then((response) => response.json())
       .then((data) => {
         return data;
