@@ -32,42 +32,49 @@ const MenuList = ({ categoryID }) => {
             "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
           }
           heroName={"Smash"}
+          categoryID={categoryID}
         />
         <MenuListCard
           heroImage={
             "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16.jpg"
           }
           heroName={"Smash"}
+          categoryID={categoryID}
         />
         <MenuListCard
           heroImage={
             "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16.jpg"
           }
           heroName={"Smash"}
+          categoryID={categoryID}
         />
         <MenuListCard
           heroImage={
             "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16.jpg"
           }
           heroName={"Smash"}
+          categoryID={categoryID}
         />
         <MenuListCard
           heroImage={
             "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
           }
           heroName={"Smash"}
+          categoryID={categoryID}
         />
         <MenuListCard
           heroImage={
             "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
           }
           heroName={"Smash"}
+          categoryID={categoryID}
         />
         <MenuListCard
           heroImage={
             "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
           }
           heroName={"Smash"}
+          categoryID={categoryID}
         />
       </div>
     </div>
