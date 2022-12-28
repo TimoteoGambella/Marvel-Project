@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import MenuListCard from "../MenuListCard/MenuListCard";
 
-const MenuList = ({ categoryID }) => {
+const MenuList = ({ categoryID, data }) => {
   const wallpaperColor = {
     character: "menu-list-container menu-container-red",
     comic: "menu-list-container menu-container-yellow",
@@ -22,58 +22,16 @@ const MenuList = ({ categoryID }) => {
 
   return (
     <div className={wallpaperClasses}>
-      <div className="menu-container-list-wallpaper">
-      </div>
+      <div className="menu-container-list-wallpaper"></div>
       <div className="menu-container-list-cards">
-        <MenuListCard
-          heroImage={
-            "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
-          }
-          heroName={"Smash"}
-          categoryID={categoryID}
-        />
-        <MenuListCard
-          heroImage={
-            "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16.jpg"
-          }
-          heroName={"Smash"}
-          categoryID={categoryID}
-        />
-        <MenuListCard
-          heroImage={
-            "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16.jpg"
-          }
-          heroName={"Smash"}
-          categoryID={categoryID}
-        />
-        <MenuListCard
-          heroImage={
-            "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16.jpg"
-          }
-          heroName={"Smash"}
-          categoryID={categoryID}
-        />
-        <MenuListCard
-          heroImage={
-            "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
-          }
-          heroName={"Smash"}
-          categoryID={categoryID}
-        />
-        <MenuListCard
-          heroImage={
-            "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
-          }
-          heroName={"Smash"}
-          categoryID={categoryID}
-        />
-        <MenuListCard
-          heroImage={
-            "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
-          }
-          heroName={"Smash"}
-          categoryID={categoryID}
-        />
+        {data.map((element) => (
+          <MenuListCard
+            key={element.id}
+            heroImage={`${element.thumbnail.path}.${element.thumbnail.extension}`}
+            heroName={categoryID === 'characters' ? element.name : element.title}
+            categoryID={categoryID}
+          />
+        ))}
       </div>
     </div>
   );
