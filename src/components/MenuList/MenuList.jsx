@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import MenuListCard from "../MenuListCard/MenuListCard";
-import { DotPulse } from "@uiball/loaders";
+import { Ping } from "@uiball/loaders";
+import fetchData from "../../helpers/fetchData";
 
-const MenuList = ({ categoryID, data }) => {
+const MenuList = ({ categoryID }) => {
   const wallpaperColor = {
     character: "menu-list-container menu-container-red",
     comic: "menu-list-container menu-container-yellow",
@@ -21,13 +22,21 @@ const MenuList = ({ categoryID, data }) => {
     }
   }, [categoryID]);
 
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true)
+    fetchData(setData, setLoading, categoryID);
+  }, [categoryID]);
+
   return (
     <div className={wallpaperClasses}>
       <div className="menu-container-list-wallpaper"></div>
       <div className="menu-container-list-cards">
-        {data.length === 0 ? (
+        {loading ? (
           <div className="menu-container-loader">
-            <DotPulse size={80} speed={1.3} color="white" />
+            <Ping size={60} speed={2} color="white" />
           </div>
         ) : (
           data.map((element) => (
