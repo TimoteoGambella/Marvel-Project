@@ -1,15 +1,35 @@
-.menu-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: fit-content;
-  margin-bottom: 70px;
+.menu-container-red{
   background: rgb(200, 0, 0);
   background: radial-gradient(
     circle,
     rgb(148, 0, 0) 0%,
     rgb(21, 0, 0) 100%
   );
+}
+
+.menu-container-yellow{
+  background: rgb(200, 147, 0);
+  background: radial-gradient(
+    circle,
+    rgb(143, 148, 0) 0%,
+    rgb(21, 0, 0) 100%
+  );
+}
+
+.menu-container-orange{
+  background: rgb(200, 80, 0);
+  background: radial-gradient(
+    circle,
+    rgb(148, 71, 0) 0%,
+    rgb(21, 0, 0) 100%
+  );
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
   z-index: 10;
 
   .menu-container-hero {
@@ -48,7 +68,6 @@
     .menu-container-list-wallpaper{
       display: flex;
       width: 100%;
-
     }
 
     #menu-list-wallpaper{
@@ -62,7 +81,7 @@
       gap: 20px;
       flex-wrap: wrap;
       justify-content: center;
-      margin-top: 50px;
+      margin: 50px 0px;
     }
 
     .menu-list-card {
