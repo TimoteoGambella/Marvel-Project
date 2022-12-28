@@ -102,8 +102,12 @@
       z-index:3;
 
       &:hover{
-        cursor: pointer;
+        //cursor: pointer;
         transform: scale(1.02);
+      }
+
+      .menu-list-card-anchor{
+        text-decoration: none;
       }
 
       .menu-list-card-body {

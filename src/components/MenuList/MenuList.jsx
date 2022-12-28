@@ -26,7 +26,7 @@ const MenuList = ({ categoryID }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true)
+    setLoading(true);
     fetchData(setData, setLoading, categoryID);
   }, [categoryID]);
 
@@ -41,11 +41,10 @@ const MenuList = ({ categoryID }) => {
         ) : (
           data.map((element) => (
             <MenuListCard
+              elementData={element}
               key={element.id}
-              heroImage={`${element.thumbnail.path}.${element.thumbnail.extension}`}
-              heroName={
-                categoryID === "characters" ? element.name : element.title
-              }
+              image={`${element.thumbnail.path}.${element.thumbnail.extension}`}
+              name={categoryID === "characters" ? element.name : element.title}
               categoryID={categoryID}
             />
           ))
