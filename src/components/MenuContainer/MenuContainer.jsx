@@ -20,7 +20,7 @@ const MenuContainer = () => {
   });
 
   useEffect(()=>{
-    getData()
+    //getData()
   },[categoryID])
 
   return (

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MenuListCard from "../MenuListCard/MenuListCard";
+import { DotPulse } from "@uiball/loaders";
 
 const MenuList = ({ categoryID, data }) => {
   const wallpaperColor = {
@@ -24,14 +25,22 @@ const MenuList = ({ categoryID, data }) => {
     <div className={wallpaperClasses}>
       <div className="menu-container-list-wallpaper"></div>
       <div className="menu-container-list-cards">
-        {data.map((element) => (
-          <MenuListCard
-            key={element.id}
-            heroImage={`${element.thumbnail.path}.${element.thumbnail.extension}`}
-            heroName={categoryID === 'characters' ? element.name : element.title}
-            categoryID={categoryID}
-          />
-        ))}
+        {data.length === 0 ? (
+          <div className="menu-container-loader">
+            <DotPulse size={80} speed={1.3} color="white" />
+          </div>
+        ) : (
+          data.map((element) => (
+            <MenuListCard
+              key={element.id}
+              heroImage={`${element.thumbnail.path}.${element.thumbnail.extension}`}
+              heroName={
+                categoryID === "characters" ? element.name : element.title
+              }
+              categoryID={categoryID}
+            />
+          ))
+        )}
       </div>
     </div>
   );
