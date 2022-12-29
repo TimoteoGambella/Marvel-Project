@@ -13,14 +13,13 @@ const DetailContainer = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    categoryID !== undefined && setDisplayCategories(true);
+  });
+  
+  useEffect(() => {
     setLoading(true);
     fetchElement(setData, setLoading, categoryID, itemID);
   }, [categoryID, itemID]);
-  console.log(itemID);
-
-  useEffect(() => {
-    categoryID !== undefined && setDisplayCategories(true);
-  });
 
   return (
     <div>

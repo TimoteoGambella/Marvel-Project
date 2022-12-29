@@ -1,6 +1,7 @@
 import React from "react";
+import DetailBodysub from "../DetailBodysub/DetailBodysub";
 
-const DetailHero = ({categoryID, data }) => {
+const DetailHero = ({ categoryID, data }) => {
   return (
     <div className="detail-container-hero">
       <div className="detail-container-body">
@@ -15,24 +16,7 @@ const DetailHero = ({categoryID, data }) => {
             id="detail-container-body-text-body"
             className="font-family-marvel-roboto"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-            illum excepturi nesciunt. Aut odit et numquam sunt quam laudantium
-            necessitatibus corporis. Quibusdam quasi aliquid, ad, rerum
-            exercitationem iure minus obcaecati cumque, culpa sapiente eveniet
-            esse. Facere saepe eum distinctio, molestias laboriosam nostrum ab
-            assumenda modi iure itaque fuga quas veritatis?
-          </p>
-          <h2 className="font-family-marvel-principal detail-container-body-text-subheader">
-            Subheader
-          </h2>
-          <p className="font-family-marvel-roboto detail-container-body-text-subbody">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, ad.
-          </p>
-          <h2 className="font-family-marvel-principal detail-container-body-text-subheader">
-            Subheader
-          </h2>
-          <p className="font-family-marvel-roboto detail-container-body-text-subbody">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, in.
+            {data.description}
           </p>
         </div>
         <div className="detail-container-picture">
@@ -42,6 +26,14 @@ const DetailHero = ({categoryID, data }) => {
             alt="detailPicture"
           />
         </div>
+      </div>
+      <div className="detail-container-bodysub">
+        <DetailBodysub subtitle={'Writer'} subtext={'Pepe'} />
+        <DetailBodysub subtitle={'Writer'} subtext={'Pepe'} />
+        <DetailBodysub subtitle={'Writer'} subtext={'Pepe'} />
+        <DetailBodysub subtitle={'Writer'} subtext={'Pepe'} />
+        <DetailBodysub subtitle={'Writer'} subtext={'Pepe'} />
+        <DetailBodysub subtitle={'Writer'} subtext={'Pepe'} />
       </div>
     </div>
   );

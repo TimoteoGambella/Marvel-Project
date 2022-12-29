@@ -10,6 +10,7 @@
   .detail-container-hero {
     width: 100%;
     display: flex;
+    flex-direction: column;
 
     .detail-container-body {
       margin: 115px auto;
@@ -51,6 +52,29 @@
           border-radius: 20px;
         }
       }
+    }
+    .detail-container-bodysub{
+      margin: 30px auto;
+      margin-bottom: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      width: 70%;
+      justify-content: space-between;
+      /* background-color: #000000; */
+      border-radius: 20px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      
+      .detail-container-bodysub-text-subheader {
+        font-size: 32px;
+        text-transform: uppercase;
+      }
+      .detail-container-bodysub-text-subbody {
+        margin: 20px 0;
+        font-size: 20px;
+      }
+      
     }
 
     .detail-container-hero-wallpaper {
