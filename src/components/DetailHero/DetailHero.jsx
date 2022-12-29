@@ -1,22 +1,15 @@
 import React from "react";
 
-const DetailHero = ({ categoryID, itemID }) => {
+const DetailHero = ({categoryID, data }) => {
   return (
     <div className="detail-container-hero">
-      {/* <div className="detail-container-hero-wallpaper">
-        <img
-          id="detail-hero-wallpaper"
-          src=''
-          alt="categoryWallpaper"
-        />
-      </div> */}
       <div className="detail-container-body">
         <div className="detail-container-body-text">
           <h1
             className="font-family-marvel-principal"
             id="detail-container-body-text-header"
           >
-            {itemID}
+            {categoryID === "characters" ? data.name : data.title}
           </h1>
           <p
             id="detail-container-body-text-body"
@@ -45,7 +38,7 @@ const DetailHero = ({ categoryID, itemID }) => {
         <div className="detail-container-picture">
           <img
             id="detail-picture"
-            src="https://blog.latam.playstation.com/tachyon/sites/3/2022/06/35cad566eb5c0eb56188715723bbcb0c3d28982d.jpg?resize=1088%2C612&crop_strategy=smart"
+            src={`${data.thumbnail.path}.${data.thumbnail.extension}`}
             alt="detailPicture"
           />
         </div>
