@@ -2,6 +2,7 @@ import React from "react";
 import DetailBodysub from "../DetailBodysub/DetailBodysub";
 
 const DetailHero = ({ categoryID, data }) => {
+  console.log(data);
   return (
     <div className="detail-container-hero">
       <div className="detail-container-body">
@@ -28,12 +29,10 @@ const DetailHero = ({ categoryID, data }) => {
         </div>
       </div>
       <div className="detail-container-bodysub">
-        <DetailBodysub subtitle={'Writer'} subtext={'Pepe'} />
-        <DetailBodysub subtitle={'Writer'} subtext={'Pepe'} />
-        <DetailBodysub subtitle={'Writer'} subtext={'Pepe'} />
-        <DetailBodysub subtitle={'Writer'} subtext={'Pepe'} />
-        <DetailBodysub subtitle={'Writer'} subtext={'Pepe'} />
-        <DetailBodysub subtitle={'Writer'} subtext={'Pepe'} />
+        {data.creators && data.creators.items.splice(0,7).map((element)=>{
+          return <DetailBodysub subtitle={element.role} subtext={element.name} />
+        })}
+        {data.rating && <DetailBodysub subtitle={'Rating'} subtext={data.rating} />}
       </div>
     </div>
   );
