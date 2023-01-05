@@ -1,5 +1,6 @@
 import { Box, Button, Modal, Typography } from "@mui/material";
 import { useState } from "react";
+import FooterWorkerCard from "../FooterWorkerCard/FooterWorkerCard";
 
 const style = {
   display: "flex",
@@ -10,7 +11,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  width: 'fit-content',
   bgcolor: "#f9fbe7",
   border: "none",
   borderRadius: "20px",
@@ -46,9 +47,32 @@ const FooterSocials = () => {
           >
             WORK TEAM
           </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
+          <Box id="modal-modal-description" display="flex" gap='10px' sx={{ mt: 2 }}>
+            <FooterWorkerCard
+              image="https://media.licdn.com/dms/image/C4D03AQG7AMvyKJoMfQ/profile-displayphoto-shrink_200_200/0/1654825100218?e=1678320000&v=beta&t=3AKM3ZNuhzlhYRsdujLY-h32coTVeVu2YPh4-OFjRxM"
+              job="Developer"
+              linkedin="https://www.linkedin.com/in/patoalbornoz/"
+              name="Patricio Albornoz"
+            />
+            <FooterWorkerCard
+              image="https://media.licdn.com/dms/image/C4D03AQG7AMvyKJoMfQ/profile-displayphoto-shrink_200_200/0/1654825100218?e=1678320000&v=beta&t=3AKM3ZNuhzlhYRsdujLY-h32coTVeVu2YPh4-OFjRxM"
+              job="Developer"
+              linkedin="https://www.linkedin.com/in/patoalbornoz/"
+              name="Patricio Albornoz"
+            />
+            <FooterWorkerCard
+              image="https://media.licdn.com/dms/image/C4D03AQG7AMvyKJoMfQ/profile-displayphoto-shrink_200_200/0/1654825100218?e=1678320000&v=beta&t=3AKM3ZNuhzlhYRsdujLY-h32coTVeVu2YPh4-OFjRxM"
+              job="Developer"
+              linkedin="https://www.linkedin.com/in/patoalbornoz/"
+              name="Patricio Albornoz"
+            />
+            <FooterWorkerCard
+              image="https://media.licdn.com/dms/image/C4D03AQG7AMvyKJoMfQ/profile-displayphoto-shrink_200_200/0/1654825100218?e=1678320000&v=beta&t=3AKM3ZNuhzlhYRsdujLY-h32coTVeVu2YPh4-OFjRxM"
+              job="Developer"
+              linkedin="https://www.linkedin.com/in/patoalbornoz/"
+              name="Patricio Albornoz"
+            />
+          </Box>
         </Box>
       </Modal>
     </div>
