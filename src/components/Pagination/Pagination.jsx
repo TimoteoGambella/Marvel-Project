@@ -24,10 +24,18 @@ const Pagination = ({cantidad,pags,setPags, setData,setLoading,categoryID}) => {
       count={cantidad}
       page={pags}
       onChange={handleChange}
+      sx={{
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
+        marginBottom:'50px',
+      }}
       renderItem={(item) => (
         <PaginationItem
             sx={{
-                color:"white"
+                color:"white",
+                fontFamily:"Inter",
+                fontSize:'18px'
             }}
           component={Link}
           to={`${pathname}`}
