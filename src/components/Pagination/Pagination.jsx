@@ -1,21 +1,24 @@
 import React from "react";
-import { Link, useLocation,useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import MuiPagination from "@mui/material/Pagination";
 import PaginationItem from "@mui/material/PaginationItem";
+import fetchData from "../../helpers/fetchData";
 
-const Pagination = ({cantidad,buscarPage,pags,setPags}) => {
+const Pagination = ({cantidad,pags,setPags, setData,setLoading,categoryID}) => {
   const { pathname } = useLocation();
-  const { search } = useParams();
 
   const handleChange = (event, value) => {
     setPags(value)
-    if(search!==undefined){
-      buscarPage(true,value-1)
-    }
-    if(search===undefined){
-      buscarPage(false,value-1)
-    }
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'auto',
+    });
+
+    setLoading(true)
+    fetchData(setData, setLoading, categoryID, value*30);
   };
+
   return (
     <MuiPagination
       count={cantidad}
@@ -23,6 +26,9 @@ const Pagination = ({cantidad,buscarPage,pags,setPags}) => {
       onChange={handleChange}
       renderItem={(item) => (
         <PaginationItem
+            sx={{
+                color:"white"
+            }}
           component={Link}
           to={`${pathname}`}
           {...item}

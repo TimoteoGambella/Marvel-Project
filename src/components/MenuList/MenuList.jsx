@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import MenuListCard from "../MenuListCard/MenuListCard";
 import { Ping } from "@uiball/loaders";
 import fetchData from "../../helpers/fetchData";
+import Pagination from "../Pagination/Pagination";
 
 const MenuList = ({ categoryID }) => {
   const wallpaperColor = {
@@ -20,15 +21,30 @@ const MenuList = ({ categoryID }) => {
     } else if (categoryID === "series") {
       setWallpaperClasses(wallpaperColor.serie);
     }
-  }, [categoryID]);
+  }, [categoryID]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  
   useEffect(() => {
     setLoading(true);
-    fetchData(setData, setLoading, categoryID);
+    fetchData(setData, setLoading, categoryID, 0);
   }, [categoryID]);
+
+  
+  const [cantidadPaginas, setCantidadPaginas] = useState(0);
+  const [paginaActual, setPaginaActual] = useState(1);
+  
+  useEffect(() => {
+    if(data.length!==0){
+      if(data.total % 100 !== 0){
+        setCantidadPaginas(Math.round(data.total/30))
+      }else{
+        setCantidadPaginas(Math.round(data.total/30))
+      }
+    }
+  }, [data]);
 
   return (
     <div className={wallpaperClasses}>
@@ -39,7 +55,7 @@ const MenuList = ({ categoryID }) => {
             <Ping size={60} speed={2} color="white" />
           </div>
         ) : (
-          data.map((element) => (
+          data.results.map((element) => (
             <MenuListCard
               elementData={element}
               key={element.id}
@@ -50,6 +66,14 @@ const MenuList = ({ categoryID }) => {
           ))
         )}
       </div>
+      <Pagination
+        cantidad={cantidadPaginas}
+        pags={paginaActual}
+        setPags={setPaginaActual}
+        setData={setData}
+        setLoading={setLoading}
+        categoryID={categoryID}
+      />
     </div>
   );
 };
