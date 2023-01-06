@@ -13,8 +13,20 @@ import React from "react";
 const FooterWorkerCard = ({ image, name, job, linkedin }) => {
   return (
     <Box>
-      <Card sx={{ maxWidth: 345, bgcolor: "transparent", boxShadow: "none" }}>
-        <CardMedia sx={{ height: 200 }} image={image} title={`${name} Photo`} />
+      <Card
+        sx={{
+          marginTop: "15px",
+          minWidth: 200,
+          maxWidth: 345,
+          bgcolor: "transparent",
+          boxShadow: "none",
+        }}
+      >
+        <CardMedia
+          sx={{ height: 200, borderRadius: "50%" }}
+          image={image}
+          title={`${name} Photo`}
+        />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {name}
@@ -23,13 +35,14 @@ const FooterWorkerCard = ({ image, name, job, linkedin }) => {
             {job}
           </Typography>
         </CardContent>
-        <CardActions>
+        <CardActions sx={{ display: "flex", justifyContent: "center" }}>
           <Button size="small">
             <Link
               underline="none"
               href={linkedin}
               target="_blank"
               rel="noopener noreferrer"
+              sx={{ color: "black", fontWeight: "bold" }}
             >
               LinkedIn Profile
             </Link>

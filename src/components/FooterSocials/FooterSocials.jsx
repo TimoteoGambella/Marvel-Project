@@ -49,9 +49,12 @@ const FooterSocials = () => {
           </Typography>
           <Box
             id="modal-modal-description"
-            display="flex"
-            gap="10px"
-            sx={{ mt: 2 }}
+            sx={{
+              gap: "20px",
+              display: "flex",
+              justifyContent: "space-between",
+              m: 3,
+            }}
           >
             <FooterWorkerCard
               image="https://media.licdn.com/dms/image/C4D03AQHjMQhlIKIS4g/profile-displayphoto-shrink_200_200/0/1625678725840?e=1678320000&v=beta&t=d59LTGCF9cchaX2KR5zYo87Cc3ex2vX2g2m-6nnIvX4"
