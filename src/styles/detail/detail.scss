@@ -1,28 +1,16 @@
-.detail-container-red{
+.detail-container-red {
   background: rgb(200, 0, 0);
-  background: radial-gradient(
-    circle,
-    rgb(148, 0, 0) 0%,
-    rgb(21, 0, 0) 100%
-  );
+  background: radial-gradient(circle, rgb(148, 0, 0) 0%, rgb(21, 0, 0) 100%);
 }
 
-.detail-container-yellow{
+.detail-container-yellow {
   background: rgb(200, 147, 0);
-  background: radial-gradient(
-    circle,
-    rgb(143, 148, 0) 0%,
-    rgb(21, 0, 0) 100%
-  );
+  background: radial-gradient(circle, rgb(143, 148, 0) 0%, rgb(21, 0, 0) 100%);
 }
 
-.detail-container-orange{
+.detail-container-orange {
   background: rgb(200, 80, 0);
-  background: radial-gradient(
-    circle,
-    rgb(148, 71, 0) 0%,
-    rgb(21, 0, 0) 100%
-  );
+  background: radial-gradient(circle, rgb(148, 71, 0) 0%, rgb(21, 0, 0) 100%);
 }
 
 .detail-container {
@@ -78,7 +66,7 @@
         }
       }
     }
-    .detail-container-bodysub{
+    .detail-container-bodysub {
       margin: 30px auto;
       margin-bottom: 50px;
       display: flex;
@@ -90,7 +78,7 @@
       border-radius: 20px;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
-      
+
       .detail-container-bodysub-text-subheader {
         font-size: 32px;
         text-transform: uppercase;
@@ -99,7 +87,6 @@
         margin: 20px 0;
         font-size: 20px;
       }
-      
     }
 
     .detail-container-hero-wallpaper {

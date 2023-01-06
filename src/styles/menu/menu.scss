@@ -1,28 +1,16 @@
-.menu-container-red{
+.menu-container-red {
   background: rgb(200, 0, 0);
-  background: radial-gradient(
-    circle,
-    rgb(148, 0, 0) 0%,
-    rgb(21, 0, 0) 100%
-  );
+  background: radial-gradient(circle, rgb(148, 0, 0) 0%, rgb(21, 0, 0) 100%);
 }
 
-.menu-container-yellow{
+.menu-container-yellow {
   background: rgb(200, 147, 0);
-  background: radial-gradient(
-    circle,
-    rgb(143, 148, 0) 0%,
-    rgb(21, 0, 0) 100%
-  );
+  background: radial-gradient(circle, rgb(143, 148, 0) 0%, rgb(21, 0, 0) 100%);
 }
 
-.menu-container-orange{
+.menu-container-orange {
   background: rgb(200, 80, 0);
-  background: radial-gradient(
-    circle,
-    rgb(148, 71, 0) 0%,
-    rgb(21, 0, 0) 100%
-  );
+  background: radial-gradient(circle, rgb(148, 71, 0) 0%, rgb(21, 0, 0) 100%);
 }
 
 .menu-container {
@@ -36,13 +24,13 @@
     height: 540px;
     background-color: #000000;
 
-    .menu-container-hero-wallpaper{
+    .menu-container-hero-wallpaper {
       display: flex;
       width: 100%;
       height: 540px;
     }
 
-    #menu-hero-wallpaper{
+    #menu-hero-wallpaper {
       display: flex;
       width: 100%;
       height: 100%;
@@ -63,27 +51,27 @@
     }
   }
   .menu-list-container {
-    width: 100%;    
+    width: 100%;
 
-    .menu-container-list-wallpaper{
+    .menu-container-list-wallpaper {
       display: flex;
       width: 100%;
     }
 
-    #menu-list-wallpaper{
+    #menu-list-wallpaper {
       display: flex;
       position: absolute;
       width: 100%;
     }
 
-    .menu-container-list-cards{
+    .menu-container-list-cards {
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
       justify-content: center;
       margin: 50px 0px;
 
-      .menu-container-loader{
+      .menu-container-loader {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -99,14 +87,14 @@
       justify-content: space-between;
       border-radius: 20px;
       transition: all 0.2s;
-      z-index:3;
+      z-index: 3;
 
-      &:hover{
+      &:hover {
         //cursor: pointer;
         transform: scale(1.02);
       }
 
-      .menu-list-card-anchor{
+      .menu-list-card-anchor {
         text-decoration: none;
       }
 
@@ -135,17 +123,16 @@
       }
     }
 
-    .menu-list-card-red{
+    .menu-list-card-red {
       box-shadow: 0px 0px 30px #9a0000;
     }
 
-    .menu-list-card-yellow{
+    .menu-list-card-yellow {
       box-shadow: 0px 0px 30px #ae9400;
     }
 
-    .menu-list-card-orange{
+    .menu-list-card-orange {
       box-shadow: 0px 0px 30px #ae6000;
     }
-    
   }
 }

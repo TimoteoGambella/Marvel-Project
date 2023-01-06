@@ -20,16 +20,21 @@ const MenuListCard = ({ image, name, categoryID, elementData }) => {
     }
   }, [categoryID]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const nameSliced = name.slice(0,35)
-  
+  const nameSliced = name.slice(0, 35);
+
   return (
     <div className={cardClasses}>
-      <Link to={`/category/${categoryID}/${elementData.id}`} className='menu-list-card-anchor'>
+      <Link
+        to={`/category/${categoryID}/${elementData.id}`}
+        className="menu-list-card-anchor"
+      >
         <div className="menu-list-card-body">
           <img className="menu-list-card-image" src={image} alt="" />
         </div>
         <div className="menu-list-card-footer font-family-marvel-roboto">
-          <p className="menu-list-card-footer-title">{name.length>35?`${nameSliced}...`:name}</p>
+          <p className="menu-list-card-footer-title">
+            {name.length > 35 ? `${nameSliced}...` : name}
+          </p>
         </div>
       </Link>
     </div>

@@ -1,62 +1,62 @@
-.navbar-container{
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(2px);
-    height: 101px;
-    width: 100%;
-    margin: auto;
-    align-items: center;
-    justify-content: space-between;
-    position: absolute;
-    top: 0;
-    img{
-        width: 105px;
-        height: 42px;
-        margin-left: 32px;
+.navbar-container {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  height: 101px;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  img {
+    width: 105px;
+    height: 42px;
+    margin-left: 32px;
+  }
+  z-index: 1;
+  .navbar-menu {
+    gap: 6rem;
+  }
+  .navbar-menu-links {
+    font-family: "Roboto";
+    font-style: normal;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+
+    :hover {
+      color: red;
     }
-    z-index: 1;
-    .navbar-menu{
-        gap: 6rem;
+    :link {
+      color: white;
     }
-    .navbar-menu-links{
-        font-family: 'Roboto';
-        font-style: normal;
-        color: white;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 19px;
-        color: white;
-        
-        :hover{
-            color:red;
-        }
-        :link{
-            color: white;
-        }
-        :active{
-            color: white;
-        }
-        transition: all 2s;
-        text-decoration: none;
+    :active {
+      color: white;
     }
-    .searchbar{
-        width: 210px;
-        height: 34px;
-        background: rgba(217, 217, 217, 0.22);
-        border-radius: 180px;
-        margin-right: 32px;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 19px;
-    }
-    svg{
-        color: white;
-    }
-    input{
-        font-family: 'Roboto';
-        font-style: normal;
-        color: white;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 19px;
-    }
+    transition: all 2s;
+    text-decoration: none;
+  }
+  .searchbar {
+    width: 210px;
+    height: 34px;
+    background: rgba(217, 217, 217, 0.22);
+    border-radius: 180px;
+    margin-right: 32px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  svg {
+    color: white;
+  }
+  input {
+    font-family: "Roboto";
+    font-style: normal;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+  }
 }

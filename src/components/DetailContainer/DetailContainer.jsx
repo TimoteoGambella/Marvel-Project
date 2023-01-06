@@ -33,7 +33,7 @@ const DetailContainer = () => {
   useEffect(() => {
     categoryID !== undefined && setDisplayCategories(true);
   });
-  
+
   useEffect(() => {
     setLoading(true);
     fetchElement(setData, setLoading, categoryID, itemID);

@@ -11,7 +11,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 'fit-content',
+  width: "fit-content",
   bgcolor: "#f9fbe7",
   border: "none",
   borderRadius: "20px",
@@ -47,7 +47,12 @@ const FooterSocials = () => {
           >
             WORK TEAM
           </Typography>
-          <Box id="modal-modal-description" display="flex" gap='10px' sx={{ mt: 2 }}>
+          <Box
+            id="modal-modal-description"
+            display="flex"
+            gap="10px"
+            sx={{ mt: 2 }}
+          >
             <FooterWorkerCard
               image="https://media.licdn.com/dms/image/C4D03AQHjMQhlIKIS4g/profile-displayphoto-shrink_200_200/0/1625678725840?e=1678320000&v=beta&t=d59LTGCF9cchaX2KR5zYo87Cc3ex2vX2g2m-6nnIvX4"
               job="Developer"

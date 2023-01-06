@@ -3,8 +3,7 @@ import { createContext, useState } from "react";
 export const UseApiContext = createContext();
 
 export const ApiContext = ({ children }) => {
-
-  const [displayCategories, setDisplayCategories] = useState(null)
+  const [displayCategories, setDisplayCategories] = useState(null);
 
   const keyApiMarvel = "ae8aa38451b4cc9abc698da16728d4fe";
 
@@ -40,7 +39,13 @@ export const ApiContext = ({ children }) => {
 
   return (
     <UseApiContext.Provider
-      value={{ apiFetch1, apiFetch2, keyApiMarvel, displayCategories, setDisplayCategories }}
+      value={{
+        apiFetch1,
+        apiFetch2,
+        keyApiMarvel,
+        displayCategories,
+        setDisplayCategories,
+      }}
     >
       {children}
     </UseApiContext.Provider>

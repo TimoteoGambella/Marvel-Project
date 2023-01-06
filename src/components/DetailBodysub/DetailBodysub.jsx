@@ -1,6 +1,6 @@
 import React from "react";
 
-const DetailBodysub = ({subtitle, subtext}) => {
+const DetailBodysub = ({ subtitle, subtext }) => {
   return (
     <div>
       <h2 className="font-family-marvel-principal detail-container-bodysub-text-subheader">

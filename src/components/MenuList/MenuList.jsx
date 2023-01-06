@@ -26,36 +26,34 @@ const MenuList = ({ categoryID }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  
   useEffect(() => {
     setLoading(true);
     fetchData(setData, setLoading, categoryID, 0);
   }, [categoryID]);
 
-  
   const [cantidadPaginas, setCantidadPaginas] = useState(0);
   const [paginaActual, setPaginaActual] = useState(0);
-  
-  useEffect(() => {
-    if(data.length!==0){
-      if(data.total % 100 !== 0){
-        let numberToString=(data.total/30).toString()
-        let busqueda = numberToString.indexOf(".")
 
-        if(busqueda!==-1){
-         if(numberToString[busqueda+1]>=5){
-          setCantidadPaginas(Math.round(data.total/30))
-         }else{
-          setCantidadPaginas(Math.round(data.total/30+1))
-         }
+  useEffect(() => {
+    if (data.length !== 0) {
+      if (data.total % 100 !== 0) {
+        let numberToString = (data.total / 30).toString();
+        let busqueda = numberToString.indexOf(".");
+
+        if (busqueda !== -1) {
+          if (numberToString[busqueda + 1] >= 5) {
+            setCantidadPaginas(Math.round(data.total / 30));
+          } else {
+            setCantidadPaginas(Math.round(data.total / 30 + 1));
+          }
         }
-      }else{
-        setCantidadPaginas((data.total/30))
+      } else {
+        setCantidadPaginas(data.total / 30);
       }
     }
   }, [data]);
 
-  console.log(cantidadPaginas)
+  console.log(cantidadPaginas);
 
   return (
     <div className={wallpaperClasses}>

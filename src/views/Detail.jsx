@@ -1,10 +1,8 @@
-import React from 'react'
-import DetailContainer from '../components/DetailContainer/DetailContainer'
+import React from "react";
+import DetailContainer from "../components/DetailContainer/DetailContainer";
 
 const Detail = () => {
-  return (
-    <DetailContainer />
-  )
-}
+  return <DetailContainer />;
+};
 
-export default Detail
+export default Detail;

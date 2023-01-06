@@ -29,10 +29,15 @@ const DetailHero = ({ categoryID, data }) => {
         </div>
       </div>
       <div className="detail-container-bodysub">
-        {data.creators && data.creators.items.splice(0,7).map((element)=>{
-          return <DetailBodysub subtitle={element.role} subtext={element.name} />
-        })}
-        {data.rating && <DetailBodysub subtitle={'Rating'} subtext={data.rating} />}
+        {data.creators &&
+          data.creators.items.splice(0, 7).map((element) => {
+            return (
+              <DetailBodysub subtitle={element.role} subtext={element.name} />
+            );
+          })}
+        {data.rating && (
+          <DetailBodysub subtitle={"Rating"} subtext={data.rating} />
+        )}
       </div>
     </div>
   );

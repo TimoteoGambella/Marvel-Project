@@ -4,19 +4,26 @@ import MuiPagination from "@mui/material/Pagination";
 import PaginationItem from "@mui/material/PaginationItem";
 import fetchData from "../../helpers/fetchData";
 
-const Pagination = ({cantidad,pags,setPags, setData,setLoading,categoryID}) => {
+const Pagination = ({
+  cantidad,
+  pags,
+  setPags,
+  setData,
+  setLoading,
+  categoryID,
+}) => {
   const { pathname } = useLocation();
 
   const handleChange = (event, value) => {
-    setPags(value)
+    setPags(value);
 
     window.scrollTo({
-        top: 0,
-        behavior: 'auto',
+      top: 0,
+      behavior: "auto",
     });
 
-    setLoading(true)
-    fetchData(setData, setLoading, categoryID, (value-1)*30);
+    setLoading(true);
+    fetchData(setData, setLoading, categoryID, (value - 1) * 30);
   };
 
   return (
@@ -25,18 +32,18 @@ const Pagination = ({cantidad,pags,setPags, setData,setLoading,categoryID}) => {
       page={pags}
       onChange={handleChange}
       sx={{
-        display:'flex',
-        justifyContent:'center',
-        alignItems:'center',
-        marginBottom:'50px',
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        marginBottom: "50px",
       }}
       renderItem={(item) => (
         <PaginationItem
-            sx={{
-                color:"white",
-                fontFamily:"Inter",
-                fontSize:'18px'
-            }}
+          sx={{
+            color: "white",
+            fontFamily: "Inter",
+            fontSize: "18px",
+          }}
           component={Link}
           to={`${pathname}`}
           {...item}

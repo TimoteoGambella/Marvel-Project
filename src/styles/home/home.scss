@@ -2,14 +2,14 @@
   background-image: url("../../assets/fondoHome.png");
   width: 100%;
   height: 100vh;
-  .hero-container{
+  .hero-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 70px;
-    padding-top:150px;
+    padding-top: 150px;
   }
-  .hero-text{
+  .hero-text {
     display: flex;
     flex-direction: column;
     margin-right: 20rem;
@@ -35,19 +35,19 @@
     width: 1168px;
     justify-content: space-between;
     text-decoration: none;
-    :link{
+    :link {
       text-decoration: none;
       color: white;
     }
-    :visited{
+    :visited {
       text-decoration: none;
       color: white;
     }
-    :hover{
+    :hover {
       color: #ff4444;
     }
   }
-  .option-card{
+  .option-card {
     width: 320px;
     height: 320px;
     left: 947px;
@@ -61,12 +61,12 @@
     box-shadow: none;
     transition: all 0.5s ease-in;
     /* box-shadow: 0px 0px 30px #FFFFFF; */
-    color: #FFFFFF;
-    &:hover{
+    color: #ffffff;
+    &:hover {
       box-shadow: 0px 0px 30px #ff4444;
     }
   }
-  .option-card-text{
+  .option-card-text {
     width: 277px;
     height: 25px;
     text-decoration: none;
@@ -76,7 +76,7 @@
     line-height: 32px;
     text-align: center;
 
-    color: #FFFFFF;
+    color: #ffffff;
     text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.5);
   }
 }
