@@ -2,7 +2,6 @@ import React from "react";
 import DetailBodysub from "../DetailBodysub/DetailBodysub";
 
 const DetailHero = ({ categoryID, data }) => {
-  console.log(data);
   return (
     <div className="detail-container-hero">
       <div className="detail-container-body">

@@ -6,9 +6,9 @@ const DetailCard = ({ heroImage, heroName }) => {
       <div className="detail-card-body">
         <img className="detail-card-image" src={heroImage} alt="" />
       </div>
-      <div className="detail-card-footer font-family-marvel-roboto">
+      {/* <div className="detail-card-footer font-family-marvel-roboto">
         <p>{heroName}</p>
-      </div>
+      </div> */}
     </div>
   );
 };

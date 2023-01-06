@@ -40,13 +40,13 @@ const DetailContainer = () => {
   }, [categoryID, itemID]);
 
   return (
-    <div>
+    <div className={wallpaperClasses}>
       {loading ? (
         <div className="menu-container-loader">
           <Ping size={60} speed={2} color="white" />
         </div>
       ) : (
-        <div className={wallpaperClasses}>
+        <div>
           <DetailHero categoryID={categoryID} data={data} />
           <DetailFooter categoryID={categoryID} itemID={itemID} />
         </div>
