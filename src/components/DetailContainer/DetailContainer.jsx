@@ -12,6 +12,24 @@ const DetailContainer = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const wallpaperColor = {
+    character: "detail-container detail-container-red",
+    comic: "detail-container detail-container-yellow",
+    serie: "detail-container detail-container-orange",
+  };
+
+  const [wallpaperClasses, setWallpaperClasses] = useState("");
+
+  useEffect(() => {
+    if (categoryID === "characters") {
+      setWallpaperClasses(wallpaperColor.character);
+    } else if (categoryID === "comics") {
+      setWallpaperClasses(wallpaperColor.comic);
+    } else if (categoryID === "series") {
+      setWallpaperClasses(wallpaperColor.serie);
+    }
+  }, [categoryID]); // eslint-disable-line react-hooks/exhaustive-deps
+
   useEffect(() => {
     categoryID !== undefined && setDisplayCategories(true);
   });
@@ -28,7 +46,7 @@ const DetailContainer = () => {
           <Ping size={60} speed={2} color="white" />
         </div>
       ) : (
-        <div className="detail-container">
+        <div className={wallpaperClasses}>
           <DetailHero categoryID={categoryID} data={data} />
           <DetailFooter categoryID={categoryID} itemID={itemID} />
         </div>

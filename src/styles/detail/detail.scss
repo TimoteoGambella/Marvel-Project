@@ -1,10 +1,35 @@
+.detail-container-red{
+  background: rgb(200, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgb(148, 0, 0) 0%,
+    rgb(21, 0, 0) 100%
+  );
+}
+
+.detail-container-yellow{
+  background: rgb(200, 147, 0);
+  background: radial-gradient(
+    circle,
+    rgb(143, 148, 0) 0%,
+    rgb(21, 0, 0) 100%
+  );
+}
+
+.detail-container-orange{
+  background: rgb(200, 80, 0);
+  background: radial-gradient(
+    circle,
+    rgb(148, 71, 0) 0%,
+    rgb(21, 0, 0) 100%
+  );
+}
+
 .detail-container {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: fit-content;
-  background: rgb(200, 0, 0);
-  background: radial-gradient(circle, rgb(148, 0, 0) 0%, rgb(21, 0, 0) 100%);
   z-index: 10;
 
   .detail-container-hero {
