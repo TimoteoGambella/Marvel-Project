@@ -16,7 +16,7 @@ const Pagination = ({cantidad,pags,setPags, setData,setLoading,categoryID}) => {
     });
 
     setLoading(true)
-    fetchData(setData, setLoading, categoryID, value*30);
+    fetchData(setData, setLoading, categoryID, (value-1)*30);
   };
 
   return (
