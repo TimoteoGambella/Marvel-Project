@@ -7,20 +7,16 @@ import fetchNewestData from "../../helpers/fetchNewestData";
 import { Ping } from "@uiball/loaders";
 
 const DetailFooter = ({ categoryID, itemID }) => {
-  const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [slideOne, setSlideOne] = useState([]);
+  const [slideTwo, setSlideTwo] = useState([]);
+  const [slideThree, setSlideThree] = useState([]);
 
   useEffect(() => {
-    fetchNewestData(setData, setLoading, categoryID, itemID);
+    fetchNewestData(setSlideOne, setLoading, categoryID, 0);
+    fetchNewestData(setSlideTwo, setLoading, categoryID, 4);
+    fetchNewestData(setSlideThree, setLoading, categoryID, 8);
   }, [categoryID, itemID]);
-
-  /* const slideOne = sliderData.splice(0, 4)
-  const slideTwo = sliderData.splice(4, 8)
-  const slideThree = sliderData.splice(8, 12)
-
-  console.log(slideOne);
-  console.log(slideTwo);
-  console.log(slideThree); */
 
   return (
     <div className="detail-container-footer">
@@ -40,29 +36,67 @@ const DetailFooter = ({ categoryID, itemID }) => {
                     <Ping size={60} speed={2} color="white" />
                   </div>
                 ) : (
-                  data.results
-                    .splice(0, 4)
-                    .map((element) => (
-                      <DetailCard
-                        categoryID={categoryID}
-                        elementData={element}
-                        key={element.id}
-                        heroImage={`${element.thumbnail.path}.${element.thumbnail.extension}`}
-                        heroName={
-                          categoryID === "characters"
-                            ? element.name
-                            : element.title
-                        }
-                      />
-                    ))
+                  slideOne.map((element) => (
+                    <DetailCard
+                      categoryID={categoryID}
+                      elementData={element}
+                      key={element.id}
+                      heroImage={`${element.thumbnail.path}.${element.thumbnail.extension}`}
+                      heroName={
+                        categoryID === "characters"
+                          ? element.name
+                          : element.title
+                      }
+                    />
+                  ))
                 )}
               </div>
             </SwiperSlide>
             <SwiperSlide className="detail-container-carrousel-slide font-family-marvel-principal">
-              Slide 2
+              <div className="detail-container-cards">
+                {loading ? (
+                  <div className="menu-container-loader">
+                    <Ping size={60} speed={2} color="white" />
+                  </div>
+                ) : (
+                  slideTwo.map((element) => (
+                    <DetailCard
+                      categoryID={categoryID}
+                      elementData={element}
+                      key={element.id}
+                      heroImage={`${element.thumbnail.path}.${element.thumbnail.extension}`}
+                      heroName={
+                        categoryID === "characters"
+                          ? element.name
+                          : element.title
+                      }
+                    />
+                  ))
+                )}
+              </div>
             </SwiperSlide>
             <SwiperSlide className="detail-container-carrousel-slide font-family-marvel-principal">
-              Slide 3
+              <div className="detail-container-cards">
+                {loading ? (
+                  <div className="menu-container-loader">
+                    <Ping size={60} speed={2} color="white" />
+                  </div>
+                ) : (
+                  slideThree.map((element) => (
+                    <DetailCard
+                      categoryID={categoryID}
+                      elementData={element}
+                      key={element.id}
+                      heroImage={`${element.thumbnail.path}.${element.thumbnail.extension}`}
+                      heroName={
+                        categoryID === "characters"
+                          ? element.name
+                          : element.title
+                      }
+                    />
+                  ))
+                )}
+              </div>
             </SwiperSlide>
           </Swiper>
         </div>
