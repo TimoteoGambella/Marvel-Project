@@ -20,7 +20,8 @@ const MenuListCard = ({ image, name, categoryID, elementData }) => {
     }
   }, [categoryID]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const nameSliced = name.slice(0, 35);
+  // categoryID === "characters" ? element.name : element.title
+  const nameSliced = categoryID === "characters" ? name.slice(0, 35) : elementData.title.slice(0, 35)
 
   return (
     <div className={cardClasses}>
