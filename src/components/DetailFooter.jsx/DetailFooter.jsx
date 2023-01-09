@@ -44,6 +44,7 @@ const DetailFooter = ({ categoryID, itemID }) => {
                     .splice(0, 4)
                     .map((element) => (
                       <DetailCard
+                        categoryID={categoryID}
                         elementData={element}
                         key={element.id}
                         heroImage={`${element.thumbnail.path}.${element.thumbnail.extension}`}
