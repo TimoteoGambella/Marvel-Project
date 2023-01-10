@@ -58,7 +58,7 @@ const FooterSocials = () => {
           >
             <FooterWorkerCard
               image="https://media.licdn.com/dms/image/C4D03AQHjMQhlIKIS4g/profile-displayphoto-shrink_200_200/0/1625678725840?e=1678320000&v=beta&t=d59LTGCF9cchaX2KR5zYo87Cc3ex2vX2g2m-6nnIvX4"
-              job="Developer"
+              job="Leader & Developer"
               linkedin="https://www.linkedin.com/in/timoteo-gambella-4b6418210/"
               name="Timoteo Gambella"
             />
