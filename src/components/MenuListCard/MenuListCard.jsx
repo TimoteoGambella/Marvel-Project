@@ -27,8 +27,6 @@ const MenuListCard = ({ image, name, categoryID, elementData }) => {
     setNameSliced(categoryID !== undefined && nameSliced.slice(0, 35));
   }, [categoryID]); // eslint-disable-line react-hooks/exhaustive-deps
 
-
-  console.log(nameSliced.length > 25);
   return (
     <div className={cardClasses}>
       <Link
