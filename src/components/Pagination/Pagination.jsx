@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Link, useLocation } from "react-router-dom";
 import MuiPagination from "@mui/material/Pagination";
 import PaginationItem from "@mui/material/PaginationItem";
@@ -25,6 +25,10 @@ const Pagination = ({
     setLoading(true);
     fetchData(setData, setLoading, categoryID, (value - 1) * 30);
   };
+
+  useEffect(() => {
+    setPags(0)
+  }, [categoryID])// eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <MuiPagination
