@@ -12,12 +12,13 @@ import { ApiContext } from "./context/ApiContext.jsx";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./styles/styles.scss";
+import { useParams } from "react-router-dom";
 
 const App = () => {
+
   return (
     <ApiContext>
       <Router>
-        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/category/:categoryID" element={<Menu />} />
