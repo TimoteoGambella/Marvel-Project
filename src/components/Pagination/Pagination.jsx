@@ -27,7 +27,7 @@ const Pagination = ({
   };
 
   useEffect(() => {
-    setPags(0)
+    setPags(1)
   }, [categoryID])// eslint-disable-line react-hooks/exhaustive-deps
 
   return (
