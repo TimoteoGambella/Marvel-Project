@@ -18,7 +18,7 @@ const NavBar = () => {
       <Link to={"/"}>
         <img src={logo} alt="LOGO" />
       </Link>
-      {displayCategories !== null && <NavBarCategories />}
+      {displayCategories !== null && window.location.pathname!=="/" && <NavBarCategories />}
       <TextField
         placeholder="Search"
         className="searchbar font-family-marvel-roboto"
