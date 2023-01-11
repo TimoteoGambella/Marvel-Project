@@ -11,7 +11,7 @@ const Home = () => {
   //         console.log(res)
   //     })
   // }, []);
-
+console.log(window.location.pathname)
   return (
     <div className="home-container">
       <div className="hero-container">
