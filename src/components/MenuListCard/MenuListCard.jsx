@@ -9,6 +9,9 @@ const MenuListCard = ({ image, name, categoryID, elementData }) => {
   };
 
   const [cardClasses, setCardClasses] = useState("");
+  const [nameSliced, setNameSliced] = useState(name);
+
+  //const nameSliced = categoryID === "characters" ? name.slice(0, 35) : elementData.title.slice(0, 35)
 
   useEffect(() => {
     if (categoryID === "characters") {
@@ -20,8 +23,9 @@ const MenuListCard = ({ image, name, categoryID, elementData }) => {
     }
   }, [categoryID]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // categoryID === "characters" ? element.name : element.title
-  const nameSliced = categoryID === "characters" ? name.slice(0, 35) : elementData.title.slice(0, 35)
+  useEffect(() => {
+    setNameSliced(categoryID !== undefined && nameSliced.slice(0, 35));
+  }, [categoryID]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className={cardClasses}>
@@ -34,7 +38,7 @@ const MenuListCard = ({ image, name, categoryID, elementData }) => {
         </div>
         <div className="menu-list-card-footer font-family-marvel-roboto">
           <p className="menu-list-card-footer-title">
-            {name.length > 35 ? `${nameSliced}...` : name}
+            {nameSliced.length > 25 ? `${nameSliced}...` : nameSliced}
           </p>
         </div>
       </Link>

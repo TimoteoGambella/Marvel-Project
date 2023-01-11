@@ -41,11 +41,9 @@ const MenuList = ({ categoryID }) => {
         let busqueda = numberToString.indexOf(".");
 
         if (busqueda !== -1) {
-          if (numberToString[busqueda + 1] >= 5) {
-            console.log(data.total)
+          if (numberToString[busqueda + 1] >= 5) {            
             setCantidadPaginas(Math.round(data.total / 30));
-          } else {
-            console.log(data.total)
+          } else {            
             setCantidadPaginas(Math.round(data.total / 30 + 1));
           }
         }
