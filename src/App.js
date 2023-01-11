@@ -16,19 +16,17 @@ import "./styles/styles.scss";
 
 const App = () => {
   return (
-    <>
-      <ApiContext>
-        <Router>
-          <NavBar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/category/:categoryID" element={<Menu />} />
-            <Route path="/category/:categoryID/:itemID" element={<Detail />} />
-          </Routes>
-          <Footer />
-        </Router>
-      </ApiContext>
-    </>
+    <ApiContext>
+      <Router>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/category/:categoryID" element={<Menu />} />
+          <Route path="/category/:categoryID/:itemID" element={<Detail />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </ApiContext>
   );
 };
 
