@@ -38,7 +38,7 @@ const MenuListCard = ({ image, name, categoryID, elementData }) => {
         </div>
         <div className="menu-list-card-footer font-family-marvel-roboto">
           <p className="menu-list-card-footer-title">
-            {nameSliced.length > 25 ? `${nameSliced}...` : nameSliced}
+            {nameSliced!==undefined && nameSliced.length > 25 ? `${nameSliced}...` : nameSliced}
           </p>
         </div>
       </Link>
