@@ -24,8 +24,10 @@ const MenuListCard = ({ image, name, categoryID, elementData }) => {
   }, [categoryID]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
-    setNameSliced(categoryID !== undefined && nameSliced.slice(0, 35));
-  }, [categoryID]); // eslint-disable-line react-hooks/exhaustive-deps
+    if(nameSliced!==undefined){
+      setNameSliced(categoryID !== undefined && nameSliced.slice(0, 35));
+    }
+  }, [categoryID,nameSliced]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className={cardClasses}>
