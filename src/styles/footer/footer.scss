@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: flex-end;
 
-  background: rgb(0, 0, 0,0.5);
   backdrop-filter: blur(2px);
   z-index: 3;
   .footer-text-container {
@@ -38,8 +37,11 @@
 }
 .footer-position-relative{
   position: relative;
+  background: rgb(0, 0, 0);
+
 }
 .footer-position-fixed{
   position: fixed;
   bottom: 0;
+  background: rgb(0, 0, 0,0.5);
 }

@@ -2,6 +2,7 @@ import React from "react";
 import HeroOptions from "../components/HeroOptions/HeroOptions";
 import HeroText from "../components/HeroText/HeroText";
 // import { UseApiContext } from "../context/ApiContext";
+import Footer from "../components/Footer/Footer";
 
 const Home = () => {
   // const {apiFetch1}=useContext(UseApiContext)
@@ -18,6 +19,7 @@ console.log(window.location.pathname)
         <HeroText />
         <HeroOptions />
       </div>
+      <Footer />
     </div>
   );
 };

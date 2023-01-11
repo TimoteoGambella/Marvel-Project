@@ -6,7 +6,6 @@ import Menu from "./views/Menu.jsx";
 import Detail from "./views/Detail.jsx";
 
 import NavBar from "./components/NavBar/NavBar.jsx";
-import Footer from "./components/Footer/Footer.jsx";
 
 import { ApiContext } from "./context/ApiContext.jsx";
 
@@ -24,7 +23,6 @@ const App = () => {
           <Route path="/category/:categoryID" element={<Menu />} />
           <Route path="/category/:categoryID/:itemID" element={<Detail />} />
         </Routes>
-        <Footer />
       </Router>
     </ApiContext>
   );
